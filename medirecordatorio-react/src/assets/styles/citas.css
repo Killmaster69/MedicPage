@@ -1,0 +1,266 @@
+/* citas.css */
+.citas-container {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.citas-container h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.citas-container h1 i {
+  color: #4a90e2;
+  margin-right: 12px;
+  font-size: 26px;
+}
+
+.citas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 25px;
+}
+
+.cita-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-top: 20px;
+  border: 1px solid #f0f0f0;
+}
+
+.cita-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.appointment-icon {
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4a90e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+  z-index: 1;
+}
+
+.cita-card-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f9fbfd;
+}
+
+.paciente-info {
+  display: flex;
+  align-items: center;
+}
+
+.paciente-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4a90e2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 22px;
+  margin-right: 15px;
+  box-shadow: 0 3px 8px rgba(74, 144, 226, 0.2);
+}
+
+.paciente-details h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.especialidad {
+  font-size: 14px;
+  color: #666;
+  background-color: #f0f7ff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.cita-status {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #f0f0f0;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.cita-status i {
+  margin-right: 6px;
+}
+
+.status-confirmed {
+  background-color: #e3f5e6;
+  color: #2e7d32;
+}
+
+.status-pending {
+  background-color: #fff8e1;
+  color: #f57c00;
+}
+
+.status-in-progress {
+  background-color: #e8eaf6;
+  color: #3f51b5;
+}
+
+.cita-card-body {
+  padding: 20px;
+}
+
+.cita-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cita-info-item {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 10px;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.cita-info-item:first-child {
+  margin-left: 0;
+}
+
+.cita-info-item:last-child {
+  margin-right: 0;
+}
+
+.cita-info-item i {
+  color: #4a90e2;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.cita-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.action-btn i {
+  margin-right: 8px;
+}
+
+.view-btn {
+  background-color: #e6f0ff;
+  color: #4a90e2;
+}
+
+.view-btn:hover {
+  background-color: #d0e3ff;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.empty-icon {
+  font-size: 70px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.empty-state h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 16px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .citas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cita-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cita-info-item {
+    margin: 0;
+  }
+}

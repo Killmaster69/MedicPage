@@ -1,0 +1,239 @@
+:root {
+  --primary: #2b6cb0;
+  --primary-light: #4299e1;
+  --primary-dark: #2c5282;
+  --secondary: #38b2ac;
+  --dark: #2d3748;
+  --light: #f7fafc;
+  --gray: #718096;
+  --danger: #e53e3e;
+  --success: #38a169;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* Centrado solo para el login */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
+}
+
+/* Centrado solo para el register */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
+}
+
+/* ========== CONTENEDOR LOGIN AMPLIADO ========== */
+.medical-container {
+  background-color: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 920px;
+  min-height: 860px;
+  padding: 5rem 4rem;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ========== ENCABEZADO ========== */
+.medical-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.medical-logo {
+  color: var(--primary);
+  font-size: 2.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.medical-logo i {
+  font-size: 2.6rem;
+}
+
+.medical-subtitle {
+  color: var(--gray);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+
+/* ========== FORMULARIO ========== */
+.medical-form .form-group {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.medical-form label {
+  display: block;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.medical-form input {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  background-color: var(--light);
+}
+
+.medical-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #edf2f7;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Mostrar/Ocultar contraseña */
+.password-toggle {
+  position: absolute;
+  right: 18px;
+  top: 54px;
+  font-size: 1.1rem;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+/* Enlace para recuperar contraseña */
+.forgot-password {
+  display: block;
+  text-align: right;
+  font-size: 1rem;
+  margin-top: 8px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* ========== BOTÓN ========== */
+.medical-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.medical-btn:hover {
+  background-color: var(--primary-light);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ========== SPINNER ========== */
+.spinner {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+.fa-spinner {
+  margin-right: 6px;
+}
+
+/* ========== MENSAJES ========== */
+.error-message,
+.success-message {
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.error-message {
+  color: var(--danger);
+  background-color: #fed7d7;
+}
+
+.success-message {
+  color: var(--success);
+  background-color: #c6f6d5;
+}
+
+/* ========== FOOTER ========== */
+.medical-footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.medical-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.medical-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .medical-container {
+    padding: 3rem 2rem;
+    max-width: 90%;
+    min-height: auto;
+  }
+
+  .medical-logo {
+    font-size: 2rem;
+  }
+
+  .medical-logo i {
+    font-size: 2.2rem;
+  }
+
+  .medical-form label,
+  .medical-form input,
+  .medical-btn {
+    font-size: 1rem;
+  }
+}
